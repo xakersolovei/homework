@@ -2,14 +2,14 @@ name: Run tests
 
 on: [push, pull_request]
 
-
 jobs:
   tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 2
 
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
 
-      - name: pytest
+      - name: Run tests via pytest
         uses: docker://ghcr.io/intyamo/pytester
