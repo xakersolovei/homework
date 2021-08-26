@@ -1,5 +1,23 @@
 # Homework
 
+## Задания
+
+### 1. Числа и арифметические выражения
+
+- circle
+- pizza_delivery
+
+### 2. Логические выражения, `bool`, `if`/`elif`/`else`
+
+- coins
+- leap_year
+- lessons
+
+### 3. Строки
+
+- str_remove_fragment
+- password_checker
+
 ## Краткая инструкция
 
 1. Установите git и `pytest`
