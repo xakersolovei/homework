@@ -17,6 +17,7 @@
 
 - str_remove_fragment
 - password_checker
+- chess_fen
 
 ## Краткая инструкция
 
