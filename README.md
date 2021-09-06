@@ -20,6 +20,10 @@
 - chess_fen
 - atbash_cipher
 
+### 4. Iterable
+
+- hamming_distance
+
 ## Краткая инструкция
 
 1. Установите git и `pytest`
