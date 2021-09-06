@@ -24,6 +24,7 @@
 
 - hamming_distance
 - polygon
+- bible
 
 ## Краткая инструкция
 
