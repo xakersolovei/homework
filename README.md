@@ -23,6 +23,7 @@
 ### 4. Iterable
 
 - hamming_distance
+- polygon
 
 ## Краткая инструкция
 
