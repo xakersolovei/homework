@@ -27,13 +27,4 @@ R = 3.0
 
 
 def polygon_vertices(n: int, r: float = R) -> list:
-    angle = pi / 2
-    step = 2 * pi / n
-    vertices = [(0.0, r)]
-
-    for _ in range(n - 1):
-        angle -= step
-        vert = r * cos(angle), r * sin(angle)
-        vertices.append(vert)
-
-    return vertices
+    pass
