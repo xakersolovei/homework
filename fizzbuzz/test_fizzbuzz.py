@@ -12,7 +12,7 @@ def test_3_5_15():
 
 
 def test_3_5_15_multiplied():
-    MULTIPLIER = 12
+    MULTIPLIER = 7
     assert fizzbuzz(3 * MULTIPLIER) == "Fizz"
     assert fizzbuzz(5 * MULTIPLIER) == "Buzz"
     assert fizzbuzz(15 * MULTIPLIER) == "FizzBuzz"
