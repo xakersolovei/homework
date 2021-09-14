@@ -32,6 +32,10 @@
 - numeric_palindrom
 - fizzbuzz
 
+### 6. Functions
+
+- rectangles
+
 ## Краткая инструкция
 
 1. Установите git и `pytest`
