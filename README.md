@@ -35,6 +35,7 @@
 ### 6. Functions
 
 - rectangles
+- get_ranges
 
 ## Краткая инструкция
 
