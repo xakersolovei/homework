@@ -17,10 +17,20 @@
 #   - через if / elif / else
 #   - через одно логическое выражение (and, or, not)
 
-
 def is_leap_year(year: int) -> bool:
-    pass
+    # Вариант 1
 
+    flags = False
+    if year % 400 == 0:
+        flags = True
+    elif year % 100 > 0:
+        if year % 4 == 0:
+            flags = True
+
+    """ Вариант 2
+    # r = (year % 400 == 0) or ((year % 100 > 0) and (year % 4 == 0)) """
+
+    return flags
 
 if __name__ == "__main__":
     year = int(input("Введите год: "))
