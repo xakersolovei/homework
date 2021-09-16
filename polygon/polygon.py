@@ -27,4 +27,18 @@ R = 3.0
 
 
 def polygon_vertices(n: int, r: float = R) -> list:
-    pass
+
+    x = 0
+    y = r
+
+    fun = -(360 * pi / 180) / n
+
+    vertic = [(x, y)]
+
+    for point in range(1, n):
+        x1 = x * cos(fun) - y * sin(fun)
+        y1 = x * sin(fun) + y * cos(fun)
+        vertic.append((x1, y1))
+        x, y = x1, y1
+
+    return vertic
