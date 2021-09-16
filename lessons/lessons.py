@@ -10,13 +10,24 @@
 """
 
 
-def end_of_lesson(n: int) -> (int, int):
-    return 0, 0
+def end_of_lesson(num_lessons: int) -> (int, int):
+    hours_end = 8 * 60      #Общее время в минутах
+    for i in range(1, num_lessons + 1):     #Заводим цикл от первого урока до последнего + 1(+ 1 так как range)
+        hours_end += 45     #Добавляем время урока к общему времени
+        if i < num_lessons:    #Проверяем последний ли урок
+            if i % 2 == 0:      #Проверяем четный или не четный урок и исходя из этого добовляем время
+                hours_end += 15     #Четный
+            else:
+                hours_end += 5      #Не четный
+
+    h_end = hours_end // 60     #Узнаем кол-во часов
+    m_end = hours_end % 60      #Узнаем кол-во минут
+    return h_end, m_end     #Вывод данных
 
 
 if __name__ == "__main__":
-    n = int(input("Номер урока: "))
+    num_lessons = int(input("Номер урока: "))
 
-    hours, minutes = end_of_lesson(n)
+    hours, minutes = end_of_lesson(num_lessons)
 
-    print(f"{n}-ый урок заканчивается в {hours}:{minutes:02}")
+    print(f"{num_lessons}-ый урок заканчивается в {hours}:{minutes:02}")
