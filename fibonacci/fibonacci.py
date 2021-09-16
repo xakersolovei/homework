@@ -6,10 +6,12 @@
 
 https://en.wikipedia.org/wiki/Fibonacci_number
 """
+import math
 
+cv = math.sqrt(5)
 
 def fibonacci(n: int) -> int:
     if n < 0:
         raise ValueError("Index must be >= 0")
 
-    pass
+    return int(((cv + 1) / 2) ** n / cv + 0.5)
