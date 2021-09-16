@@ -28,15 +28,29 @@ R N B Q K B N R
 ```
 """
 
+import chess
+
+
 PAWN_VAL = 1  # пешка
 KNIGHT_VAL = BISHOP_VAL = 3  # конь и слон
 ROOK_VAL = 5  # ладья
 QUEEN_VAL = 9  # ферзь
 
+CHESS = {'p': PAWN_VAL, 'n': KNIGHT_VAL, 'b': BISHOP_VAL, 'r': ROOK_VAL, 'q': QUEEN_VAL}    #Словарь фигур
 
 def calc_chess_balance(fen: str) -> int:
-    pass
 
+    chess_result = 0
+
+    for character in fen.split(' ')[0]:
+        if character.lower() in 'rnbqp':
+            if character.isupper():
+                chess_result += CHESS[character.lower()]
+            else:
+                chess_result -= CHESS[character.lower()]
+
+    return chess_result
 
 def chess_board(fen: str) -> str:
-    pass
+
+    return str(chess.Board(fen))
