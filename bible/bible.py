@@ -7,14 +7,25 @@
 
 
 from pathlib import Path
-
+import string
+from collections import Counter
 
 f = Path(__file__).parent.absolute() / "king_james_bible.txt"
 BIBLE = f.read_text()
 
 
 def most_freq_bible_words(n: int) -> list:
-    pass
+    bible = BIBLE.split()
+    list = []
+
+    for word in bible:
+        for znak in string.punctuation:
+            word = word.replace(znak, '')
+        list.append(word.lower())
+
+    super_slova = Counter(list).most_common(n)
+
+    return [i[0] for i in super_slova]
 
 
 if __name__ == "__main__":
