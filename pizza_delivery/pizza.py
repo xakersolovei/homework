@@ -10,24 +10,38 @@
 #
 # Для решения понадобится использовать деление по модулю %
 # или целочисленное деление //.
+from math import *
+
+num_f = 4
+'''Кол-во квартир на одном этаже'''
 
 
-def find_entrance(f, n):
+def find_flats(home_high):
     """
-    f - число этажей в доме
-    n - номер квартиры
+    home_high - число этажей в доме
+    num_kv - номер квартиры
     """
+    return num_f * home_high
 
-    return 0
 
-
-def find_floor(f, n):
+def find_entrance(home_high, num_kv):
     """
-    f - число этажей в доме
-    n - номер квартиры
+    home_high - число этажей в доме
+    num_kv - номер квартиры
     """
+    return ceil(num_kv / find_flats(home_high))
 
-    return 0
+
+def find_floor(home_high, num_kv):
+    """
+    home_high - число этажей в доме
+    num_kv - номер квартиры
+    """
+    num_kv_entr = num_kv % find_flats(home_high)
+    if num_kv_entr == 0:
+        return home_high
+    else:
+        return ceil(num_kv_entr / num_f)
 
 
 if __name__ == "__main__":
